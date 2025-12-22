@@ -1,0 +1,241 @@
+/* =========================================
+   FOOTER – ULTRA WIDE ONLY
+   ========================================= */
+@media (min-width: 2465px) {
+
+  .site-footer {
+    height: 850px;
+  }
+
+  /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 820px 1fr;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] {
+    width: 600px !important;
+  }
+
+  .site-footer img[alt="Contact Us"] {
+    width: 440px !important;
+  }
+
+  .site-footer img[alt="Services"] {
+    width: 320px !important;
+  }
+
+  .site-footer img[alt="Work"] {
+    width: 230px !important;
+  }
+
+  .site-footer img[alt="Home"],
+  .site-footer img[alt="About"] {
+    width: 210px !important;
+  }
+
+  .site-footer img[alt="LinkedIn"],
+  .site-footer img[alt="YouTube"],
+  .site-footer img[alt="Instagram"] {
+    width: 100px !important;
+  }
+}
+
+@media (min-width: 2400px) {
+    .site-footer {
+    height: 750px;
+  }
+
+  /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 740px 1fr;
+  }
+}
+
+@media (min-width: 2200px) {
+    .site-footer {
+    height: 750px;
+  }
+
+  /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 740px 1fr;
+  }
+}
+
+
+@media (max-width: 1837px) {
+
+  .site-footer {
+    height: 580px;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] {
+    width: 340px !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 1830px) {
+
+  .site-footer {
+    height: 600px;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] 
+    { 
+        width: 340px !important; height: auto !important; 
+    } 
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 300px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 200px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 170px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 150px !important; 
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+    } 
+}
+
+@media (max-width: 1739px) {
+
+  .site-footer {
+    height: 570px;
+  }
+  
+  /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 500px 1fr;
+  }
+  
+}
+
+@media (max-width: 1647px) {
+
+  .site-footer {
+    height: 560px;
+  }
+  
+  /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 500px 1fr;
+  }
+  
+}
+
+@media (max-width: 1600px) {
+
+  .site-footer {
+    height: 580px;
+  }
+  
+  /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 500px 1fr;
+  }
+  
+}
+
+@media (max-width: 1600px) { 
+    .site-footer 
+    { height: 510px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 460px 1fr;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] 
+    { 
+        width: 340px !important; height: auto !important; 
+    } 
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 300px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 215px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 150px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 145px !important; 
+        margin-top: 45px;
+    } 
+
+    .site-footer img[alt="About"] 
+    { 
+        margin-top: 49px;
+    }
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+        margin-top: 40px;
+    } 
+}
+
+/* =============================== BELOW 1440px =============================== */ 
+@media (max-width: 1468px) { 
+    .site-footer 
+    { height: 480px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 450px 1fr;
+  }
+    
+    .site-footer img[alt="Indiefluence Garage"] 
+    { 
+        width: 340px !important; height: auto !important; 
+    } 
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 300px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 200px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 170px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 150px !important; 
+        margin-top: 0;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+        margin-top: 0;
+    } 
+}
