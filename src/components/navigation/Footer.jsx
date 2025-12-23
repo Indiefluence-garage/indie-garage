@@ -60,7 +60,7 @@ const Footer = () => {
                 />
               </div>
 
-              <div className="flex justify-start -ml-16 mt-5 gap-x-8 2xl:gap-x-12 2xl:-ml-15 2xl:-mt-10 cursor-pointer">
+              <div className="flex justify-start -ml-16 mt-5 xl:gap-x-8 2xl:gap-x-12 2xl:-ml-15 2xl:-mt-10 cursor-pointer">
                 <Image src="/assets/footer/linkedin.png" alt="LinkedIn" width={120} height={120} className="w-[66px] 2xl:w-[80px]" />
                 <Image src="/assets/footer/youtube.png" alt="YouTube" width={120} height={120} className="w-[66px] 2xl:w-[80px]" />
                 <Image src="/assets/footer/insta.png" alt="Instagram" width={120} height={120} className="w-[66px] 2xl:w-[80px]" />

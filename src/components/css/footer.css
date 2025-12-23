@@ -111,6 +111,9 @@
     } 
 }
 
+
+/* =============================== BELOW 1739px =============================== */ 
+
 @media (max-width: 1739px) {
 
   .site-footer {
@@ -137,18 +140,8 @@
   
 }
 
-@media (max-width: 1600px) {
 
-  .site-footer {
-    height: 580px;
-  }
-  
-  /* grid override ONLY for ultra-wide */
-  .site-footer > div > div {
-    grid-template-columns: 500px 1fr;
-  }
-  
-}
+/* =============================== BELOW 1600px =============================== */ 
 
 @media (max-width: 1600px) { 
     .site-footer 
@@ -197,21 +190,64 @@
     } 
 }
 
-/* =============================== BELOW 1440px =============================== */ 
-@media (max-width: 1468px) { 
+
+/* =============================== BELOW 1536px =============================== */ 
+
+@media (max-width: 1536px) { 
+    .site-footer 
+    { height: 510px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 460px 1fr;
+  }
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 300px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 215px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 150px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 145px !important; 
+        margin-top: 45px;
+    } 
+
+    .site-footer img[alt="About"] 
+    { 
+        margin-top: 49px;
+    }
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+        margin-top: 40px;
+    } 
+}
+
+
+/* =============================== BELOW 1535px =============================== */ 
+
+@media (max-width: 1535px) { 
     .site-footer 
     { height: 480px; 
     } 
 
     /* grid override ONLY for ultra-wide */
   .site-footer > div > div {
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 500px 1fr;
   }
     
-    .site-footer img[alt="Indiefluence Garage"] 
-    { 
-        width: 340px !important; height: auto !important; 
-    } 
     
     .site-footer img[alt="Contact Us"] 
     { 
@@ -239,3 +275,462 @@
         margin-top: 0;
     } 
 }
+
+
+/* =============================== BELOW 1499px =============================== */ 
+
+@media (max-width: 1499px) { 
+    .site-footer 
+    { height: 480px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 470px 1fr;
+  }
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 280px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 200px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 150px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 140px !important; 
+        margin-top: 0;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+        margin-top: 0;
+    } 
+}
+
+/* =============================== BELOW 1440px =============================== */ 
+
+@media (max-width: 1440px) { 
+    .site-footer 
+    { height: 480px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 450px 1fr;
+  }
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 280px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 200px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 150px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 140px !important; 
+        margin-top: 0;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+        margin-top: 0;
+    } 
+}
+
+
+/* =============================== BELOW 1399px =============================== */
+@media (max-width: 1420px) { 
+    .site-footer 
+    { height: 450px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 440px 1fr;
+  }
+    
+    .site-footer img[alt="Contact Us"] 
+    { 
+        width: 280px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 200px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 135px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 130px !important; 
+        margin-top: 10px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 70px !important; 
+        margin-top: 0;
+    } 
+}
+
+
+
+/* =============================== BELOW 1366px =============================== */ 
+
+@media (max-width: 1366px) { 
+    .site-footer 
+    { height: 450px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 430px 1fr;
+  }
+    
+}
+
+
+/* =============================== BELOW 1337px =============================== */ 
+
+@media (max-width: 1337px) { 
+    .site-footer 
+    { height: 430px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 420px 1fr;
+  }
+    
+}  
+
+
+/* =============================== BELOW 1300px =============================== */ 
+
+@media (max-width: 1300px) { 
+    .site-footer 
+    { height: 430px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 410px 1fr;
+  }
+    
+}  
+
+
+/* =============================== BELOW 1279px =============================== */ 
+
+@media (max-width: 1279px) { 
+    .site-footer 
+    { height: 360px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 400px 1fr;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] {
+    width: 300px !important;
+    margin-top: -120px;
+  }
+
+  .site-footer img[alt="Contact Us"] 
+    { 
+        width: 200px !important;
+        margin-top: -40px; 
+        margin-left: 15px;
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 130px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 100px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 90px !important; 
+        margin-top: 35px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 50px !important; 
+        margin-top: 20px;
+        margin-left: 15px;
+        gap: 0;
+    } 
+    
+} 
+
+
+/* =============================== BELOW 1270px =============================== */ 
+
+@media (max-width: 1270px) { 
+    .site-footer 
+    { height: 430px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 390px 1fr;
+  }
+
+  .site-footer img[alt="Contact Us"] 
+    { 
+        width: 250px !important; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 180px !important; 
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 125px !important; 
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 120px !important; 
+        margin-top: 25px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 60px !important; 
+        margin-top: 10px;
+    } 
+    
+}  
+
+
+/* =============================== BELOW 1243px =============================== */ 
+
+@media (max-width: 1243px) { 
+    .site-footer 
+    { height: 400px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 390px 1fr;
+  }
+
+  .site-footer img[alt="Contact Us"] 
+    { 
+        width: 230px !important;
+        margin-top: 5px; 
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 170px !important; 
+        margin-top: 5px;
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 115px !important; 
+        margin-top: 5px;
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 110px !important; 
+        margin-top: 25px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 60px !important; 
+        margin-top: 10px;
+    } 
+    
+}  
+
+
+/* =============================== BELOW 1183px =============================== */ 
+
+@media (max-width: 1183px) { 
+    .site-footer 
+    { height: 360px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 380px 1fr;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] {
+    width: 280px !important;
+    margin-top: -120px;
+  }
+
+  .site-footer img[alt="Contact Us"] 
+    { 
+        width: 200px !important;
+        margin-top: -40px; 
+        margin-left: 15px;
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 130px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 100px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 90px !important; 
+        margin-top: 35px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 50px !important; 
+        margin-top: 20px;
+        margin-left: 15px;
+        gap: 0;
+    } 
+    
+} 
+
+
+
+/* =============================== BELOW 1118px =============================== */ 
+
+@media (max-width: 1128px) { 
+    .site-footer 
+    { height: 360px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 350px 1fr;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] {
+    width: 280px !important;
+    margin-top: -120px;
+  }
+
+  .site-footer img[alt="Contact Us"] 
+    { 
+        width: 200px !important;
+        margin-top: -40px; 
+        margin-left: 15px;
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 130px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 100px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 90px !important; 
+        margin-top: 35px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 50px !important; 
+        margin-top: 20px;
+        margin-left: 15px;
+        gap: 0;
+    } 
+    
+} 
+
+
+/* =============================== BELOW 1065px and 1024px =============================== */ 
+
+@media (max-width: 1065px) { 
+    .site-footer 
+    { height: 330px; 
+    } 
+
+    /* grid override ONLY for ultra-wide */
+  .site-footer > div > div {
+    grid-template-columns: 325px 1fr;
+  }
+
+  .site-footer img[alt="Indiefluence Garage"] {
+    width: 260px !important;
+    margin-top: -120px;
+  }
+
+  .site-footer img[alt="Contact Us"] 
+    { 
+        width: 200px !important;
+        margin-top: -40px; 
+        margin-left: 15px;
+    } 
+    
+    .site-footer img[alt="Services"] 
+    { 
+        width: 130px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Work"] 
+    { 
+        width: 100px !important; 
+        margin-top: -40px;
+    } 
+    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    { 
+        width: 90px !important; 
+        margin-top: 35px;
+    } 
+    
+    .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
+    .site-footer img[alt="Instagram"] 
+    { 
+        width: 50px !important; 
+        margin-top: 20px;
+        margin-left: 15px;
+        gap: 0;
+    } 
+    
+}  
+
