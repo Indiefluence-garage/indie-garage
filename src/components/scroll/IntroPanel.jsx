@@ -17,7 +17,7 @@ export default function IntroPanel() {
       />
 
       {/* LEFT */}
-      <div className="w-1/2 flex items-center justify-center px-16">
+      <div className="w-1/2 flex items-center justify-center px-16 xl:ml-13 2xl:ml-0">
         <div className="relative max-w-xl">
           <img
             src="/assets/hero-section/intro-section/left-ladi.png"
@@ -39,7 +39,7 @@ export default function IntroPanel() {
             Digital by <em>design.</em>
           </h1>
 
-          <p className="mt-6 text-[20px] text-black font-light">
+          <p className="mt-6 text-[20px] text-black font-light text-justify">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

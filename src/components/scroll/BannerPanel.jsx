@@ -1,7 +1,6 @@
 export default function BannerPanel() {
   return (
-    <div className="panel relative bg-[#FFFDF1] overflow-hidden flex items-center justify-center">
-      
+    <div className="panel min-w-[420px] h-screen relative bg-[#FFFDF1] flex items-center justify-center">
       {/* TOP DESIGN */}
       <div
         className="absolute top-0 left-0 w-full h-[109px] bg-repeat-x z-40 pointer-events-none"
@@ -12,18 +11,16 @@ export default function BannerPanel() {
         }}
       />
 
-      {/* MAIN BANNER IMAGE (CENTER) */}
       <img
         src="/assets/hero-section/banner-panel.png"
         alt="Banner"
         className="h-full object-contain z-10"
       />
 
-      {/* TRUCK AT BOTTOM */}
       <img
         src="/assets/hero-section/intro-section/truck.png"
         alt="Truck"
-        className="absolute bottom-6 left-10 z-20 w-[100px] h-[100px]"
+        className="absolute bottom-6 left-10 z-20 w-[100px]"
       />
     </div>
   );

@@ -1,6 +1,5 @@
 import { Cormorant, Lato } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
 import FooterBottomBanner from "@/components/globallyUseComponents/FooterBottomBanner";
 import LenisProvider from "@/components/scroll/lenis/LenisProvider";

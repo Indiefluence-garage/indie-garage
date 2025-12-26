@@ -3,7 +3,7 @@ import TeamCard from "@/components/scroll/TeamCard";
 
 export default function TeamPanel() {
   return (
-    <div className="panel flex items-center justify-center overflow-hidden">
+    <div className="panel team-panel flex items-center justify-center">
       
       {/* INTERNAL HORIZONTAL SCROLL AREA */}
       <div className="w-full h-full overflow-x-auto">

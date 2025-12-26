@@ -5,6 +5,7 @@ import React from 'react'
 import ContactForm from '@/components/home/ContactForm'
 import ClientsBanner from '@/components/home/ClientsBanner'
 import ScrollExperience from '@/components/scroll/ScrollExperience'
+import TestimonialSection from '@/components/testimonial/TestimonialSection'
 import Navbar from '@/components/navigation/Navbar'
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
       <Navbar/>
       <ScrollExperience/>
       <HomeLoader/>
+      <TestimonialSection/>
       <ClientsBanner/>
       <ContactForm/>
       <ContactShutterBanner/>

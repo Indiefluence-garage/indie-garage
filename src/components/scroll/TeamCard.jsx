@@ -1,6 +1,6 @@
 export default function TeamCard({ item }) {
   return (
-    <div className="flex-shrink-0">
+    <div className="team-card flex-shrink-0">
       <div
         className="relative w-[677px] h-screen flex flex-col items-center justify-center text-center px-28"
         style={{
