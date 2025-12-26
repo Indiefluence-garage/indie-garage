@@ -2,6 +2,7 @@ import teamData from "@/data/teamData";
 import TeamCard from "@/components/scroll/TeamCard";
 
 export default function TeamPanel() {
+  
   return (
     <div className="panel team-panel flex items-center justify-center">
       

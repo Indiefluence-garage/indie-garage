@@ -11,7 +11,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-[#f7f3e8] border-b border-[#7D7D7D] sticky top-0 z-50">
+    <header className="w-full bg-[#f7f3e8] border-b border-[#7D7D7D] fixed top-0 left-0 right-0 z-50">
       <div className="grid grid-cols-[1.5fr_repeat(5,1fr)] h-[80px]">
         {/* Logo */}
         <div className="flex items-center px-6 border-r border-[#7D7D7D] overflow-hidden">

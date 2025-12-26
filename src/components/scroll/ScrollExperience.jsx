@@ -28,7 +28,7 @@ export default function ScrollExperience() {
       ease: "none",
       scrollTrigger: {
         trigger: wrapperRef.current,
-        start: "top top",
+        start: "top-=80 top",
         end: () => "+=" + getMoveDistance(),
         scrub: 1,
         pin: true,
@@ -55,17 +55,10 @@ export default function ScrollExperience() {
   return () => ctx.revert();
 }, []);
 
-
-
-
-
-
-
-
   return (
     <section
       ref={wrapperRef}
-      className="relative h-screen w-screen overflow-hidden"
+      className="relative h-[750px] 2xl:h-[800px] w-screen overflow-hidden"
     >
 
       {/* HORIZONTAL TRACK */}

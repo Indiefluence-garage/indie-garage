@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/navigation/Footer";
 import FooterBottomBanner from "@/components/globallyUseComponents/FooterBottomBanner";
 import LenisProvider from "@/components/scroll/lenis/LenisProvider";
+import Navbar from "@/components/navigation/Navbar";
 
 const cormorant = Cormorant({
   weight: ["400", "600"],
@@ -27,9 +28,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${cormorant.variable} ${lato.variable} antialiased`}>
         {/* ✅ LENIS STARTS HERE */}
-        <LenisProvider>
-          {children}
-        </LenisProvider>
+           <Navbar />
+          {/* spacer to offset the fixed header height so page content doesn't jump under it */}
+          <div className="h-20 w-full" aria-hidden="true" />
+           <LenisProvider>
+             {children}
+           </LenisProvider>
         <Footer />
         <FooterBottomBanner />
       </body>

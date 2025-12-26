@@ -3,7 +3,7 @@
 export default function IntroPanel() {
   return (
     <div
-      className="panel flex-shrink-0 h-screen w-screen flex overflow-hidden relative"
+      className="panel flex-shrink-0 h-[750px] 2xl:h-[800px] w-screen flex overflow-hidden relative "
       style={{ backgroundColor: "#FFFDF1" }}
     >
       {/* TOP DESIGN */}
@@ -12,12 +12,12 @@ export default function IntroPanel() {
         style={{
           backgroundImage:
             "url('/assets/hero-section/intro-section/intro-top-design.png')",
-          backgroundSize: "790px auto",
+          backgroundSize: "790px 109px",
         }}
       />
 
       {/* LEFT */}
-      <div className="w-1/2 flex items-center justify-center px-16 xl:ml-13 2xl:ml-0">
+      <div className="w-1/2 flex items-center justify-center px-16 xl:ml-13 2xl:ml-0 pt-20">
         <div className="relative max-w-xl">
           <img
             src="/assets/hero-section/intro-section/left-ladi.png"
@@ -50,9 +50,10 @@ export default function IntroPanel() {
         </div>
       </div>
 
+
       {/* RIGHT VIDEO */}
       <div className="flex flex-1 items-center justify-end pr-0">
-        <div className="h-full w-[650px]">
+        <div className="h-full w-[651px]">
           <video
             src="/assets/hero-section/intro-section/intro-video.mp4"
             autoPlay
