@@ -6,15 +6,7 @@ export default function IntroPanel() {
       className="panel flex-shrink-0 h-[750px] 2xl:h-[800px] w-screen flex overflow-hidden relative "
       style={{ backgroundColor: "#FFFDF1" }}
     >
-      {/* TOP DESIGN */}
-      <div
-        className="absolute top-0 left-0 w-full h-[109px]  z-20"
-        style={{
-          backgroundImage:
-            "url('/assets/hero-section/intro-section/intro-top-design.png')",
-          backgroundSize: "790px 109px",
-        }}
-      />
+      
 
       {/* LEFT */}
       <div className="w-1/2 flex items-center justify-center px-16 xl:ml-13 2xl:ml-0 pt-20">
