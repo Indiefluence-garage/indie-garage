@@ -2,16 +2,16 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
+import '@/components/css/clients-banner.css';
 
 const ClientsBanner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const containerRef = useRef(null);
   const slidesRef = useRef(null);
 
   const clients = [
     {
       id: 1,
-      image: "/assets/client-banner/myro-banner.png",
+      image: "/assets/client-banner/myro-test.png",
       website: "https://myro.bot"
     },
     {
@@ -26,26 +26,27 @@ const ClientsBanner = () => {
     }
   ];
 
-  const handleNext = () => {
-    const nextIndex = (currentIndex + 1) % clients.length;
-    animateSlide(nextIndex);
-  };
+  const slideWidth = 968;
 
-  const handlePrevious = () => {
-    const prevIndex = (currentIndex - 1 + clients.length) % clients.length;
-    animateSlide(prevIndex);
-  };
-
-  const animateSlide = (newIndex) => {
-    const slideWidth = 968; // Fixed width for each slide matching banner width
-    
+  const animateSlide = (index) => {
     gsap.to(slidesRef.current, {
-      x: -newIndex * slideWidth,
+      x: -index * slideWidth,
       duration: 0.8,
       ease: "power2.inOut"
     });
+    setCurrentIndex(index);
+  };
 
-    setCurrentIndex(newIndex);
+  const handleNext = () => {
+    if (currentIndex < clients.length - 1) {
+      animateSlide(currentIndex + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      animateSlide(currentIndex - 1);
+    }
   };
 
   const handleBannerClick = (website) => {
@@ -53,123 +54,66 @@ const ClientsBanner = () => {
   };
 
   useEffect(() => {
-    // Set initial position
-    if (slidesRef.current) {
-      gsap.set(slidesRef.current, { x: 0 });
-    }
+    gsap.set(slidesRef.current, { x: 0 });
   }, []);
 
   return (
-    <div className="relative w-full flex items-start justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 w-full h-full"
-        style={{
-          backgroundImage: `url('/assets/client-banner/client-bg.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+    <section className="clients-section">
+      {/* HEADER BADGE */}
+      <img
+        src="/assets/client-banner/header-badge.png"
+        alt="Kaam jo chhaap chhode"
+        className="header-badge-blend print-blend"
       />
 
-      {/* Content Container */}
-      <div className="relative z-10 w-full px-4 mt-6">
-        {/* Header Badge */}
-        <div className="flex justify-center">
-          <Image 
-            src="/assets/client-banner/header-badge.png" 
-            alt="Kaisa to छाप छोड़" 
-            width={394} 
-            height={230}
-            className="object-contain"
-            style={{ mixBlendMode: 'multiply' }}
-          />
-        </div>
-
-        {/* Banner Container */}
-        <div 
-          ref={containerRef}
-          className="relative w-full max-w-[968px] mx-auto overflow-hidden my-6"
-        >
-          <div 
-            ref={slidesRef}
-            className="flex"
-          >
-            {clients.map((client) => (
-              <div
-                key={client.id}
-                className="flex-shrink-0 w-[968px] flex justify-center items-center cursor-pointer"
-                onClick={() => handleBannerClick(client.website)}
-              >
-                <Image 
-                  src={client.image} 
-                  alt={`Client banner ${client.id}`}
-                  width={968}
-                  height={508}
-                  className="w-full max-w-[968px] h-[508px] object-contain hover:opacity-90 transition-opacity"
-                  style={{ mixBlendMode: 'multiply' }}
-                  priority={client.id === 1}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Navigation Buttons */}
-        <div className="flex justify-center items-center gap-6 mb-16">
-          <button
-            onClick={handlePrevious}
-            disabled={currentIndex === 0}
-            className="relative h-12 flex items-center "
-          >
-            <Image 
-              src="/assets/client-banner/previous-btn.png"
-              alt="Previous"
-              width={110}
-              height={48}
-              className={`object-contain h-12 w-auto transition-all ${
-                currentIndex === 0 
-                  ? 'opacity-100' 
-                  : 'hover:scale-105 cursor-pointer'
-              }`}
-              style={{ mixBlendMode: 'multiply' }}
-            />
-          </button>
-          <button
-            onClick={handleNext}
-            disabled={currentIndex === clients.length - 1}
-            className="relative h-12 flex items-center "
-          >
-            <Image 
-              src="/assets/client-banner/next-btn.png"
-              alt="Next"
-              width={110}
-              height={48}
-              className={`object-contain h-12 w-auto transition-all ${
-                currentIndex === clients.length - 1 
-                  ? 'opacity-100' 
-                  : 'hover:scale-105 cursor-pointer'
-              }`}
-              style={{ mixBlendMode: 'multiply' }}
-            />
-          </button>
-        </div>
-
-        {/* Dots Indicator */}
-        {/* <div className="flex justify-center gap-3">
-          {clients.map((_, index) => (
+      {/* SLIDER */}
+      <div className="slider-wrapper">
+        <div ref={slidesRef} className="slides-track">
+          {clients.map((client) => (
             <div
-              key={index}
-              className={`h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-yellow-500 w-8' 
-                  : 'bg-gray-400 w-3'
-              }`}
-            />
+              key={client.id}
+              className="slide"
+              onClick={() => handleBannerClick(client.website)}
+            >
+              <Image
+                src={client.image}
+                alt={`Client ${client.id}`}
+                width={968}
+                height={508}
+                className="print-blend"
+                priority={client.id === 1}
+              />
+            </div>
           ))}
-        </div> */}
+        </div>
       </div>
-    </div>
+
+      {/* NAVIGATION */}
+      <div className="nav-buttons">
+        <button onClick={handlePrevious} disabled={currentIndex === 0}>
+          <Image
+            src="/assets/client-banner/pre-test.png"
+            alt="Previous"
+            width={110}
+            height={48}
+            className="print-blend"
+          />
+        </button>
+
+        <button
+          onClick={handleNext}
+          disabled={currentIndex === clients.length - 1}
+        >
+          <Image
+            src="/assets/client-banner/next-test.png"
+            alt="Next"
+            width={110}
+            height={48}
+            className="print-blend"
+          />
+        </button>
+      </div>
+    </section>
   );
 };
 

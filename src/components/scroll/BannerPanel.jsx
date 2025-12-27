@@ -12,7 +12,7 @@ export default function BannerPanel() {
       <img
         src="/assets/hero-section/intro-section/truck.png"
         alt="Truck"
-        className="absolute bottom-8 2xl:bottom-11 left-10 z-20 w-[100px]"
+        className="absolute bottom-8 2xl:bottom-3 left-10 z-20 w-[100px]"
       />
     </div>
   );

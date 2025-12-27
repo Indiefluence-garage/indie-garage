@@ -10,10 +10,10 @@ const roadRage = Road_Rage({
 
 const ContactShutterBanner = () => {
   return (
-    <section className="contact-shutter-section relative w-full h-[800px] overflow-hidden">
+    <section className="contact-shutter-section relative w-full h-screen overflow-hidden">
       {/* BACKGROUND */}
       <Image
-        src="/assets/contact/shutter-banner-img.png"
+        src="/assets/contact/shutter-bg.png"
         alt="Shutter Background"
         fill
         priority
@@ -21,7 +21,7 @@ const ContactShutterBanner = () => {
       />
 
       {/* TEXT */}
-      <div className="absolute left-[80px] top-[50px] z-10 text-[#FFBE05] space-y-3 contact-shutter-text">
+      <div className="absolute left-[80px] xl:top-[70px] 2xl:top-[90px] z-10 text-[#FFBE05] space-y-3 contact-shutter-text ">
         <div>
           <h3 className={`${roadRage.className} text-[64px]`}>
             CALL KARO:

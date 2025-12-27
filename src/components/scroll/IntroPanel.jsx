@@ -2,59 +2,60 @@
 
 export default function IntroPanel() {
   return (
+    /* FULL WIDTH PANEL (BACKGROUND) */
     <div
-      className="panel flex-shrink-0 h-[750px] 2xl:h-[800px] w-screen flex overflow-hidden relative "
+      className="panel flex-shrink-0 w-screen h-[750px] 2xl:h-[800px] flex items-center overflow-hidden relative"
       style={{ backgroundColor: "#FFFDF1" }}
     >
-      
+      {/* CONTAINER */}
+      <div className="max-w-[1340px] 2xl:max-w-[1440px] w-full mx-auto flex h-full relative">
+        
+        {/* LEFT CONTENT */}
+        <div className="w-1/2 flex items-center px-16 pt-20 relative">
+          <div className="relative max-w-md 2xl:max-w-lg">
+            <img
+              src="/assets/hero-section/intro-section/left-ladi.png"
+              className="absolute -left-16 top-1/2 -translate-y-1/2"
+              alt=""
+            />
+            <img
+              src="/assets/hero-section/intro-section/right-ladi.png"
+              className="absolute -right-16 top-1/2 -translate-y-1/2"
+              alt=""
+            />
 
-      {/* LEFT */}
-      <div className="w-1/2 flex items-center justify-center px-16 xl:ml-13 2xl:ml-0 pt-20">
-        <div className="relative max-w-xl">
-          <img
-            src="/assets/hero-section/intro-section/left-ladi.png"
-            className="absolute -left-16 top-1/2 -translate-y-1/2"
-          />
-          <img
-            src="/assets/hero-section/intro-section/right-ladi.png"
-            className="absolute -right-16 top-1/2 -translate-y-1/2"
-          />
+            <img
+              src="/assets/hero-section/intro-section/truck.png"
+              className="mb-6 w-[152px] h-[152px]"
+              alt=""
+            />
 
-          <img
-            src="/assets/hero-section/intro-section/truck.png"
-            className="mb-6"
-          />
+            <h1 className="text-[64px] leading-tight">
+              Indian at <em>heart.</em>
+              <br />
+              Digital by <em>design.</em>
+            </h1>
 
-          <h1 className="text-[64px] leading-tight">
-            Indian at <em>heart.</em>
-            <br />
-            Digital by <em>design.</em>
-          </h1>
-
-          <p className="mt-6 text-[20px] text-black font-light text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
-          </p>
+            <p className="mt-6 text-[20px] text-black font-light text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            </p>
+          </div>
         </div>
-      </div>
 
-
-      {/* RIGHT VIDEO */}
-      <div className="flex flex-1 items-center justify-end pr-0">
-        <div className="h-full w-[651px]">
-          <video
-            src="/assets/hero-section/intro-section/intro-video.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="h-full w-full object-cover"
-          />
+        {/* RIGHT VIDEO */}
+        <div className="w-1/2 flex items-center justify-end">
+          <div className="h-full w-[600px]">
+            <video
+              src="/assets/hero-section/intro-section/intro-video.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
+
       </div>
     </div>
   );
