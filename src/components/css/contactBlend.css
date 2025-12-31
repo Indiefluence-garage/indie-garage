@@ -1,6 +1,8 @@
 /* ===============================
    GLOBAL BLEND CONTEXT
    =============================== */
+
+
 /* .blend-context {
   isolation: isolate; 
 } */
@@ -19,15 +21,16 @@
 .blend-item {
   mix-blend-mode: multiply;
   opacity: 0.85;
-     filter: saturate(1.30) brightness(0.99) contrast(1.20);
-
+  filter: saturate(1.30) brightness(0.99) contrast(1.20);
 }
 
 .blend-item-map{
-     mix-blend-mode: multiply;
-  opacity: 0.75;
-     filter: saturate(1.2) brightness(0.90) contrast(1.2);
+   mix-blend-mode: multiply;
+   opacity: 0.75;
+   filter: saturate(1.2) brightness(0.90) contrast(1.2);
 }
+
+
 /* ===============================
    RED PANEL (BLENDS PERFECTLY)
    =============================== */
@@ -37,5 +40,5 @@
   background-color: #a60001;
   mix-blend-mode: multiply;
   opacity: 0.85;
-   filter: saturate(1.2) brightness(0.85) contrast(1.05);
+  filter: saturate(1.2) brightness(0.85) contrast(1.05);
 }

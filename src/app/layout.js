@@ -1,9 +1,9 @@
 import { Cormorant, Lato } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/navigation/Footer";
+import Footer from "@/components/desktopNavigation/Footer";
 import FooterBottomBanner from "@/components/globallyUseComponents/FooterBottomBanner";
 import LenisProvider from "@/components/scroll/lenis/LenisProvider";
-import Navbar from "@/components/navigation/Navbar";
+import Navbar from "@/components/desktopNavigation/Navbar";
 
 const cormorant = Cormorant({
   weight: ["400", "600"],

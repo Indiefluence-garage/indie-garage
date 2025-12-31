@@ -1,25 +1,34 @@
 export default function TeamCard({ item }) {
   return (
     <div className="team-card flex-shrink-0">
-      <div
-        className="relative w-[600px] h-[750px] 2xl:h-[800px] flex flex-col items-center justify-center text-center px-28"
-        style={{
-          backgroundImage: "url('/assets/hero-section/team-card-bg.png')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "100% 100%",
-        }}
-      >
-        <h2 className="text-[150px] 2xl:text-[200px] font-cormorant leading-none mt-20">
-          {item.id}
-        </h2>
+      
+      {/* CARD WRAPPER */}
+      <div className="relative w-150 h-screen 2xl:w-162.5 2xl:h-screen flex items-center justify-center">
 
-        <h3 className="text-[48px] 2xl:text-[64px] font-medium">
-          {item.title}
-        </h3>
+        {/* CARD BG */}
+        <div
+          className="absolute z-10 -mt-16 w-180 h-180 2xl:w-151.75 2xl:h-175 bg-no-repeat bg-contain bg-center"
+          style={{
+            backgroundImage: "url('/assets/hero-section/card-bg-1.svg')",
+          }}
+        />
 
-        <p className="text-sm text-[16px] 2xl:text-[20px] font-light text-black">
-          {item.desc}
-        </p>
+        {/* CARD CONTENT */}
+        <div className="relative z-20 flex flex-col items-center text-center px-32 pt-0">
+
+          <h2 className="text-[200px] font-cormorant leading-none">
+            {item.id}
+          </h2>
+
+          <h2 className="text-[64px] font-semibold mt-2">
+            {item.title}
+          </h2>
+
+          <p className="text-[18px] font-light text-black mt-4">
+            {item.desc}
+          </p>
+
+        </div>
       </div>
     </div>
   );

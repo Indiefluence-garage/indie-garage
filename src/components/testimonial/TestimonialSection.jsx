@@ -52,7 +52,7 @@ const TestimonialSection = () => {
           alt="right design"
           width={800}
           height={200}
-          className="w-[752px] h-[150px] 2xl:w-[852px] 2xl:h-[183.43px] -mt-3 -mr-14 2xl:-mr-0"
+          className="w-[752px] h-[150px] 2xl:w-[852px] 2xl:h-[183.43px] -mt-3 -mr-14 2xl:-mr-12"
         />
       </div>
 
@@ -65,7 +65,7 @@ const TestimonialSection = () => {
             alt="testimonial badge"
             width={220}
             height={80}
-            className="w-[752px] h-[183.43px]"
+            className="w-[762px] h-[193.43px]"
           />
         </div>
 

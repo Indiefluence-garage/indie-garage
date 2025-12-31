@@ -4,7 +4,7 @@ export default function IntroPanel() {
   return (
     /* FULL WIDTH PANEL (BACKGROUND) */
     <div
-      className="panel flex-shrink-0 w-screen h-[750px] 2xl:h-[800px] flex items-center overflow-hidden relative"
+      className="panel flex-shrink-0 w-screen h-screen flex items-center overflow-hidden relative"
       style={{ backgroundColor: "#FFFDF1" }}
     >
       {/* CONTAINER */}

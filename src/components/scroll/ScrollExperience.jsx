@@ -76,7 +76,7 @@ export default function ScrollExperience() {
   return (
     <section
       ref={wrapperRef}
-      className="relative h-[750px] 2xl:h-[800px] w-screen overflow-hidden"
+      className="relative h-screen w-screen overflow-hidden"
     >
       {/* HORIZONTAL TRACK */}
       <div

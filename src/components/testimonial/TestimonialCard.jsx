@@ -14,15 +14,15 @@ const TestimonialCard = ({ item }) => {
 
       {/* CARD CONTENT */}
       <div className="absolute inset-0 px-[200px] flex flex-col justify-center text-left">
-        <p className="text-[16px] leading-relaxed text-gray-700 mb-2">
+        <p className="text-[17px] font-light leading-relaxed text-black mb-6">
           {item.text}
         </p>
 
-        <p className="font-semibold text-gray-900 mb-2">
+        <p className="font-semibold text-gray-900 mb-0 text-[17px]">
           {item.name}
         </p>
 
-        <p className="text-sm text-gray-600">
+        <p className="text-[14px] font-light text-gray-600">
           {item.company}
         </p>
       </div>
