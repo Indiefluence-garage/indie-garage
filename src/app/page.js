@@ -1,4 +1,4 @@
-import HomeLoader from '@/components/globallyUseComponents/HomeLoader'
+import HomeLoader from '@/components/home/HomeLoader'
 import FooterTopBanner from '@/components/home/FooterTopBanner'
 import ContactShutterBanner from '@/components/home/ContactShutterBanner'
 import React from 'react'

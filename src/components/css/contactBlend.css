@@ -26,8 +26,8 @@
 
 .blend-item-map{
    mix-blend-mode: multiply;
-   opacity: 0.75;
-   filter: saturate(1.2) brightness(0.90) contrast(1.2);
+   /* opacity: 0.75;
+   filter: saturate(1.2) brightness(0.90) contrast(1.2); */
 }
 
 
@@ -42,3 +42,71 @@
   opacity: 0.85;
   filter: saturate(1.2) brightness(0.85) contrast(1.05);
 }
+
+
+/* ===============================
+   CONTACT TEXT SPACING (GLOBAL)
+   =============================== */
+
+.lg-mid-content h3,
+.lg-mid-content p,
+.lg-mid-content a {
+  margin: 0;
+}
+
+.lg-mid-content h3 {
+  line-height: 0.95;
+}
+
+.lg-mid-content p,
+.lg-mid-content a {
+  line-height: 1.45;
+  margin-top: 5px;
+}
+
+
+
+/* ===============================
+   ONLY FOR 1280px – 1350px
+   =============================== */
+@media (min-width: 1280px) and (max-width: 1350px) {
+
+  .lg-mid-section {
+    height: 750px;
+  }
+
+  .lg-mid-left {
+    width: 38% !important;
+  }
+
+  .lg-mid-content {
+   padding: 20px;
+  }
+
+  .lg-mid-right {
+    width: 38% !important;
+  }
+
+  .lg-mid-center {
+    width: 38% !important;
+  }
+
+  .lg-mid-green {
+    transform: scale(0.92);
+  }
+
+  /* Headings */
+  .lg-mid-content h3 {
+    font-size: 65px !important;
+    line-height: 1.20;
+  }
+
+  /* Text values */
+  .lg-mid-content p,
+  .lg-mid-content a {
+    font-size: 26px !important;
+    line-height: 1.25;
+  }
+}
+
+

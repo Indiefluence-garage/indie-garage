@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const TestimonialCard = ({ item }) => {
   return (
-    <div className="relative w-[735px]  h-[735px] flex-shrink-0">
+    <div className="relative w-[650px] h-[690px] 2xl:w-[735px]  2xl:h-[735px] flex-shrink-0">
       {/* CARD BACKGROUND */}
       <Image
         src="/assets/testimonial/testi-card-bg.svg"
@@ -13,7 +13,7 @@ const TestimonialCard = ({ item }) => {
       />
 
       {/* CARD CONTENT */}
-      <div className="absolute inset-0 px-[200px] flex flex-col justify-center text-left">
+      <div className="absolute inset-0 px-[150px] 2xl:px-[200px] flex flex-col justify-center text-left">
         <p className="text-[17px] font-light leading-relaxed text-black mb-6">
           {item.text}
         </p>

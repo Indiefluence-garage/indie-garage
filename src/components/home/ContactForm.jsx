@@ -65,7 +65,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-section relative w-full h-[440px] xl:h-[630px] 2xl:h-[600px] overflow-hidden">
+    <section className="contact-section relative w-full h-[540px] xl:h-[630px] 2xl:h-[600px] overflow-hidden">
       {/* BACKGROUND */}
       <Image
         src="/assets/contact/contact-form-bg.svg"
@@ -76,7 +76,7 @@ const ContactForm = () => {
       />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-[1100px] mx-auto xl:pt-[90px] 2xl:pt-[160px] text-center text-[#2b2b2b] leading-9 contact-form">
+      <div className="relative z-10 max-w-[1100px] mx-auto pt-[90px] xl:pt-[90px] 2xl:pt-[160px] text-center text-[#2b2b2b] leading-9 contact-form">
         {/* LINE 1 */}
         <p className={`${roadRage.className} text-[32px] right-5`}>
           My name is <UnderlineInput minWidth={120} /> and you can reach me at{" "}

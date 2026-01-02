@@ -36,7 +36,7 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen bg-[#FFFDF1] overflow-hidden pb-20">
+    <section className="relative w-full 2xl:min-h-screen bg-[#FFFDF1] overflow-hidden pb-10 2xl:pb-20">
       {/* TOP DECORATIONS */}
       <div className="absolute top-0 left-0 w-full flex justify-between z-10 pointer-events-none">
         <Image
@@ -44,7 +44,7 @@ const TestimonialSection = () => {
           alt="left design"
           width={1000}
           height={200}
-          className="w-[752px] h-[150px] 2xl:w-[852px] 2xl:h-[183.43px] -mt-3 -ml-5"
+          className="lg:w-[552px] lg:h-[128px] xl:w-[752px] xl:h-[150px] 2xl:w-[852px] 2xl:h-[183.43px] -mt-3 -ml-5"
         />
 
         <Image
@@ -52,7 +52,7 @@ const TestimonialSection = () => {
           alt="right design"
           width={800}
           height={200}
-          className="w-[752px] h-[150px] 2xl:w-[852px] 2xl:h-[183.43px] -mt-3 -mr-14 2xl:-mr-12"
+          className="lg:w-[485px] lg:h-[128px] xl:w-[752px] xl:h-[150px] 2xl:w-[852px] 2xl:h-[183.43px] -mt-3 xl:-mr-14 2xl:-mr-12"
         />
       </div>
 
@@ -65,7 +65,7 @@ const TestimonialSection = () => {
             alt="testimonial badge"
             width={220}
             height={80}
-            className="w-[762px] h-[193.43px]"
+            className="w-[662px] 2xl:w-[762px] h-[193.43px]"
           />
         </div>
 

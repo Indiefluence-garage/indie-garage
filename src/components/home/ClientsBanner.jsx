@@ -7,7 +7,10 @@ import "@/components/css/clients-banner.css";
 
 const ClientsBanner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const slidesRef = useRef(null);
+  const containerRef = useRef(null);
+  const slideWidthRef = useRef(0);
 
   const clients = [
     {
@@ -27,11 +30,10 @@ const ClientsBanner = () => {
     },
   ];
 
-  const slideWidth = 968;
-
+  /* ================= SLIDE ANIMATION (ORIGINAL FEEL) ================= */
   const animateSlide = (index) => {
     gsap.to(slidesRef.current, {
-      x: -index * slideWidth,
+      x: -index * slideWidthRef.current,
       duration: 0.8,
       ease: "power2.inOut",
     });
@@ -54,9 +56,24 @@ const ClientsBanner = () => {
     window.open(website, "_blank", "noopener,noreferrer");
   };
 
+  /* ================= WIDTH CALCULATION (SAFE) ================= */
   useEffect(() => {
-    gsap.set(slidesRef.current, { x: 0 });
-  }, []);
+    const updateWidth = () => {
+      if (!containerRef.current) return;
+
+      slideWidthRef.current = containerRef.current.offsetWidth;
+
+      // keep current slide aligned (NO animation here)
+      gsap.set(slidesRef.current, {
+        x: -currentIndex * slideWidthRef.current,
+      });
+    };
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []); // 👈 DO NOT depend on currentIndex
 
   return (
     <section
@@ -82,9 +99,11 @@ const ClientsBanner = () => {
 
       {/* ================= SLIDER ================= */}
       <div
+        ref={containerRef}
         className="
           relative z-10
-          w-full max-w-[968px]
+          w-full
+          max-w-[720px] lg:max-w-[760px] xl:max-w-[968px]
           mx-auto overflow-hidden
         "
       >
@@ -93,7 +112,7 @@ const ClientsBanner = () => {
             <div
               key={client.id}
               onClick={() => handleBannerClick(client.website)}
-              className="shrink-0 w-[968px] cursor-pointer"
+              className="shrink-0 w-full cursor-pointer"
             >
               <Image
                 src={client.image}
@@ -112,15 +131,13 @@ const ClientsBanner = () => {
       </div>
 
       {/* ================= NAVIGATION ================= */}
-      {/* ================= NAVIGATION ================= */}
       <div className="relative z-10 flex justify-center gap-6 mt-8">
         <button
           onClick={handlePrevious}
           disabled={currentIndex === 0}
-          className={`
-      h-[48px] flex items-center justify-center
-      ${currentIndex === 0 ? "pointer-events-none " : "cursor-pointer"}
-    `}
+          className={`h-[48px] flex items-center justify-center ${
+            currentIndex === 0 ? "pointer-events-none" : "cursor-pointer"
+          }`}
         >
           <Image
             src="/assets/client-banner/pre-test.png"
@@ -134,14 +151,12 @@ const ClientsBanner = () => {
         <button
           onClick={handleNext}
           disabled={currentIndex === clients.length - 1}
-          className={`h-[48px] flex items-center justify-center
-          ${
-          currentIndex === clients.length - 1
-          ? "pointer-events-none"
-          : "cursor-pointer"
-          }
-        `}
-         >
+          className={`h-[48px] flex items-center justify-center ${
+            currentIndex === clients.length - 1
+              ? "pointer-events-none"
+              : "cursor-pointer"
+          }`}
+        >
           <Image
             src="/assets/client-banner/next-test.png"
             alt="Next"
