@@ -1,5 +1,5 @@
 import teamData from "@/data/teamData";
-import TeamCard from "@/components/scroll/TeamCard";
+import TeamCard from "@/components/desktopSections/scroll/TeamCard";
 
 
 export default function TeamPanel() {

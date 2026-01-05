@@ -4,9 +4,9 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import IntroPanel from "@/components/scroll/IntroPanel";
-import BannerPanel from "@/components/scroll/BannerPanel";
-import TeamPanel from "@/components/scroll/TeamPanel";
+import IntroPanel from "@/components/desktopSections/scroll/IntroPanel";
+import BannerPanel from "@/components/desktopSections/scroll/BannerPanel";
+import TeamPanel from "@/components/desktopSections/scroll/TeamPanel";
 
 gsap.registerPlugin(ScrollTrigger);
 

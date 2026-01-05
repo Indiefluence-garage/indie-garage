@@ -1,24 +1,18 @@
-import HomeLoader from '@/components/home/HomeLoader'
-import FooterTopBanner from '@/components/home/FooterTopBanner'
-import ContactShutterBanner from '@/components/home/ContactShutterBanner'
-import React from 'react'
-import ContactForm from '@/components/home/ContactForm'
-import ClientsBanner from '@/components/home/ClientsBanner'
-import ScrollExperience from '@/components/scroll/ScrollExperience'
-import TestimonialSection from '@/components/testimonial/TestimonialSection'
+import DesktopHome from "@/components/home/DesktopHome";
+import MobileHome from "@/components/home/MobileHome";
 
-const page = () => {
+export default function Page() {
   return (
-    <div>
-      <ScrollExperience/>
-      <HomeLoader/>
-      <TestimonialSection/>
-      <ClientsBanner/>
-      <ContactForm/>
-      <ContactShutterBanner/>
-      <FooterTopBanner/>
-    </div>
-  )
-}
+    <>
+      {/* MOBILE */}
+      <div className="block md:hidden">
+        <MobileHome />
+      </div>
 
-export default page
+      {/* DESKTOP */}
+      <div className="hidden lg:block">
+        <DesktopHome />
+      </div>
+    </>
+  );
+}

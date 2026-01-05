@@ -26,7 +26,7 @@ const HomeLoader = () => {
         width={320}
         height={320}
         priority
-        className="w-55 md:w-173.5 md:h-78.75"
+        className="w-85 md:w-173.5 md:h-78.75"
       />
     </div>
   );

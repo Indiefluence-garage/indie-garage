@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import TestimonialCard from "@/components/testimonial/TestimonialCard";
+import TestimonialCard from "@/components/desktopSections/testimonial/TestimonialCard";
 import { testimonials } from "@/data/testimonialData";
 
 const TestimonialSection = () => {

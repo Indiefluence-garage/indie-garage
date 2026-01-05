@@ -1,9 +1,13 @@
 import { Cormorant, Lato } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/navigation/Footer";
-import FooterBottomBanner from "@/components/home/FooterBottomBanner";
-import LenisProvider from "@/components/scroll/lenis/LenisProvider";
+
 import Navbar from "@/components/navigation/Navbar";
+import MobileNav from "@/components/mobileNavigation/MobileNav";
+import Footer from "@/components/navigation/Footer";
+import FooterBottomBanner from "@/components/navigation/FooterBottomBanner";
+import MobileFooter from "@/components/mobileNavigation/MobileFooter";
+import LenisProvider from "@/components/desktopSections/scroll/lenis/LenisProvider";
+import MobileBottomFooter from "@/components/mobileNavigation/MobileBottomFooter";
 
 const cormorant = Cormorant({
   weight: ["400", "600"],
@@ -27,15 +31,47 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${cormorant.variable} ${lato.variable} antialiased`}>
-        {/* ✅ LENIS STARTS HERE */}
-           <Navbar />
-          {/* spacer to offset the fixed header height so page content doesn't jump under it */}
+
+        {/* ================= MOBILE ================= */}
+        <div className="block md:hidden min-h-screen flex flex-col">
+          <MobileNav />
+          <main className="flex-1">{children}</main>
+          <MobileFooter />
+          <MobileBottomFooter/>
+        </div>
+
+        {/* ================= TABLET BLOCK SCREEN ================= */}
+        <div className="hidden md:flex lg:hidden h-screen w-full items-center justify-center bg-[#FFFDF1] px-6 text-center">
+          <div className="max-w-md space-y-6">
+            <h2 className="text-3xl font-semibold">
+              Tablet View Not Supported
+            </h2>
+            <p className="text-base text-gray-700">
+              This experience is crafted specifically for mobile and desktop
+              screens. Please switch to a mobile device or view this site on a
+              desktop for the best experience.
+            </p>
+
+            <div className="flex justify-center gap-4 text-sm text-gray-500">
+              <span>📱 Mobile</span>
+              <span>🖥 Desktop</span>
+            </div>
+          </div>
+        </div>
+
+        {/* ================= DESKTOP ================= */}
+        <div className="hidden lg:block">
+          <Navbar />
           <div className="h-20 w-full" aria-hidden="true" />
-           <LenisProvider>
-             {children}
-           </LenisProvider>
-        <Footer />
-        <FooterBottomBanner />
+
+          <LenisProvider>
+            <main>{children}</main>
+          </LenisProvider>
+
+          <Footer />
+          <FooterBottomBanner />
+        </div>
+
       </body>
     </html>
   );
