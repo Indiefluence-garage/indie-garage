@@ -1,0 +1,235 @@
+/* =====================================================
+   BASE VARIABLES (DEFAULT MOBILE)
+   ===================================================== */
+
+.mobile-hero {
+  --padding-x: 56px;
+  --padding-y: 80px;
+  --ladi-width: 16px;
+  --truck-size: 120px;
+  --heading-size: 45px;
+  --para-size: 16px;
+}
+
+/* =====================================================
+   APPLY VARIABLES
+   ===================================================== */
+
+.mobile-hero .hero-body {
+  padding: var(--padding-y) var(--padding-x);
+}
+
+.mobile-hero .left-ladi,
+.mobile-hero .right-ladi {
+  width: var(--ladi-width) !important;
+}
+
+.mobile-hero .truck {
+  width: var(--truck-size);
+  height: var(--truck-size);
+  align-self: flex-start;     /* overrides center alignment */
+  margin-left: 0;
+}
+
+.mobile-hero .hero-heading {
+  font-size: var(--heading-size);
+}
+
+.mobile-hero .hero-desc {
+  font-size: var(--para-size);
+}
+
+/* =====================================================
+   430px
+   ===================================================== */
+@media (max-width: 767px) and (min-width: 400px) {
+  .mobile-hero {
+    --padding-x: 52px;
+    --heading-size: 42px;
+  }
+  .mobile-hero {
+    --padding-x: 50px;
+    --heading-size: 45px;
+  }
+  .hero-desc {
+    --para-size: 18px;
+  }
+  .mobile-hero .left-ladi,
+  .mobile-hero .right-ladi {
+    height: 95% !important;
+  }
+  .mobile-hero .hero-body {
+    --padding-y: 80px;
+  }
+  .mobile-hero .truck {
+    align-self: flex-start;     /* overrides center alignment */
+    margin-left: 0;
+    width: 140px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 600px) {
+  .mobile-hero {
+    --padding-x: 50px;
+    --heading-size: 60px;
+    --truck-size: 125px;
+  }
+  .hero-desc {
+    --para-size: 20px;
+  }
+}
+
+@media (max-width: 599px) and (min-width: 500px) {
+  .mobile-hero {
+    --padding-x: 50px;
+    --heading-size: 50px;
+    --truck-size: 125px;
+  }
+  .hero-desc {
+    --para-size: 18px;
+  }
+  .mobile-hero .hero-body {
+    --padding-y: 80px;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 450px) {
+  .mobile-hero {
+    --padding-x: 50px;
+    --heading-size: 50px;
+    --truck-size: 125px;
+  }
+  .hero-desc {
+    --para-size: 18px;
+  }
+  .mobile-hero .hero-body {
+    --padding-y: 90px;
+  }
+}
+
+@media (max-width: 449px) and (min-width: 400px) {
+  .mobile-hero .hero-body {
+    --padding-y: 110px;
+  }
+  .hero-desc {
+    --para-size: 19px;
+  }
+  .hero-heading {
+    --heading-size: 47px;
+  }
+  .mobile-hero .truck {
+    width: 130px;
+  }
+  .mobile-hero .left-ladi,
+  .mobile-hero .right-ladi {
+    height: 95% !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .hero-desc {
+    --para-size: 19px;
+  }
+  .hero-heading {
+    --heading-size: 46px;
+  }
+}
+
+
+/* =====================================================
+   390px (iPhone 12 / 13)
+   ===================================================== */
+@media (max-width: 390px) {
+  .mobile-hero .hero-body {
+    --padding-y: 100px;
+    --padding-x: 48px;
+  }
+  .hero-desc {
+    --para-size: 17px;
+  }
+  .hero-heading {
+    --heading-size: 42px;
+  }
+  .mobile-hero .truck {
+    width: 120px;
+  }
+  .mobile-hero .left-ladi,
+  .mobile-hero .right-ladi {
+    height: 90% !important;
+  }
+}
+
+@media (max-width: 398px) {
+  .mobile-hero .hero-body {
+    --padding-y: 100px;
+    --padding-x: 48px;
+  }
+  .hero-desc {
+    --para-size: 17px;
+  }
+  .hero-heading {
+    --heading-size: 42px;
+  }
+  .mobile-hero .truck {
+    width: 120px;
+  }
+  .mobile-hero .left-ladi,
+  .mobile-hero .right-ladi {
+    height: 90% !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .mobile-hero .hero-body {
+    --padding-y: 80px;
+    --padding-x: 48px;
+  }
+  .hero-desc {
+    --para-size: 17px;
+  }
+  .hero-heading {
+    --heading-size: 40px;
+  }
+  .mobile-hero .truck {
+    width: 120px;
+  }
+  .mobile-hero .left-ladi,
+  .mobile-hero .right-ladi {
+    height: 95% !important;
+  }
+}
+
+
+/* =====================================================
+   360px
+   ===================================================== */
+@media (max-width: 363px) {
+  .hero-desc {
+    --para-size: 16px;
+  }
+  .hero-heading {
+    --heading-size: 37px;
+  }
+  .mobile-hero .truck {
+    width: 120px;
+  }
+}
+
+/* =====================================================
+   320px (Small devices)
+   ===================================================== */
+@media (max-width: 320px) {
+  .hero-desc {
+    --para-size: 15px;
+  }
+  .hero-heading {
+    --heading-size: 33px;
+  }
+  .mobile-hero .truck {
+    width: 120px;
+  }
+  .mobile-hero .hero-body {
+    --padding-y: 80px;
+    --padding-x: 48px;
+  }
+}

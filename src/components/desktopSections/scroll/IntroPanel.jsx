@@ -30,7 +30,7 @@ export default function IntroPanel() {
             /> */}
 
             <video
-              src="/assets/hero-section/truck-animation.webm"
+              src="/assets/hero-section/intro-section/truck-animation.webm"
               autoPlay
               muted
               loop
