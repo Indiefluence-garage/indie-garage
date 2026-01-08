@@ -33,3 +33,14 @@
   opacity: 0.75;
   filter: saturate(1.1) brightness(0.85) contrast(1.5);
 }
+
+
+.mobile-client-blend-banner {
+  mix-blend-mode: multiply;
+  opacity: 0.70;
+
+  filter:
+    saturate(0.98)
+    brightness(0.78)
+    contrast(1.5)
+}

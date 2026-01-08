@@ -1,0 +1,181 @@
+/* ========================================
+   MobileTestimonial.css
+   ======================================== */
+
+/* Section */
+.mobile-testimonial-section {
+  width: 100%;
+  background-color: #fffdf1;
+  overflow: hidden;
+}
+
+/* Top SVG */
+.mobile-testimonial-top-svg {
+  width: 800px;
+  margin-top: -1.25rem;
+}
+
+/* Badge Container */
+.mobile-testimonial-badge-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mobile-testimonial-badge {
+  width: 400px;
+  margin-top: 2.5rem;
+}
+
+/* Slider Wrapper */
+.mobile-testimonial-slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Slider Container - Fixed height for all screens */
+.mobile-testimonial-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 520px; /* Fixed height for all screen sizes */
+  overflow: hidden;
+}
+
+/* Card */
+.mobile-testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mobile-testimonial-card-bg {
+  width: 100%;
+  height: auto;
+}
+
+/* Card Content - Responsive padding and positioning */
+.mobile-testimonial-card-content {
+  position: absolute;
+  inset: 0;
+  padding: 2.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-testimonial-card-inner {
+  width: 100%;
+}
+
+/* Text - Responsive font size and leading */
+.mobile-testimonial-text {
+  font-size: 14px;
+  line-height: 22px;
+  color: black;
+  font-weight: 300;
+  text-align: left;
+}
+
+/* Author Section */
+.mobile-testimonial-author {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.mobile-testimonial-name {
+  font-size: 0.875rem; /* 14px */
+  color: black;
+  font-weight: 300;
+}
+
+.mobile-testimonial-company {
+  font-size: 0.75rem; /* 12px */
+  color: black;
+  font-weight: 300;
+}
+
+/* ========================================
+   RESPONSIVE STYLES
+   All adjustments for small screens
+   ======================================== */
+
+/* Screen: 500px and below */
+@media (max-width: 500px) {
+  .mobile-testimonial-card-content {
+    padding: 1.5rem 4rem;
+    justify-content: center;
+    padding-top: 5rem;
+  }
+}
+
+/* Screen: 380px and below */
+@media (max-width: 380px) {
+  .mobile-testimonial-card-content {
+    padding-top: 4rem;
+  }
+
+  .mobile-testimonial-text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+/* Screen: 360px and below */
+@media (max-width: 360px) {
+  .mobile-testimonial-card-content {
+    padding-top: 3.5rem;
+  }
+
+  .mobile-testimonial-text {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .mobile-testimonial-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 500px; /* Fixed height for all screen sizes */
+    overflow: hidden;
+  }
+}
+
+/* Screen: 340px and below */
+@media (max-width: 340px) {
+  .mobile-testimonial-card-content {
+    padding-left: 2.9rem;
+    padding-right: 2.9rem;
+  }
+
+  .mobile-testimonial-text {
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  .mobile-testimonial-name {
+    font-size: 0.7rem; /* ~11px */
+  }
+
+  .mobile-testimonial-company {
+    font-size: 0.625rem; /* 10px */
+  }
+
+  .mobile-testimonial-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: 430px; /* Fixed height for all screen sizes */
+    overflow: hidden;
+  }
+}
