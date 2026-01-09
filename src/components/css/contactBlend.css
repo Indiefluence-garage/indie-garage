@@ -67,5 +67,5 @@
 }
 
 .mobile-map-height {
-  min-height: clamp(380px, 68vh, 620px);
+  min-height: clamp(380px, 72vh, 620px);
 }

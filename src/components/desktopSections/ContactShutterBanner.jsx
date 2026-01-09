@@ -151,13 +151,7 @@ const ContactShutterBanner = () => {
 
           {/* ================= CENTER ================= */}
           <div
-            className="
-              green-board
-              relative h-full w-[36%] lg-mid-center
-              flex items-center justify-center mt-24
-              invisible xl:visible
-              hidden lg:flex
-            "
+            className="green-board relative h-full w-[36%] lg-mid-center flex items-center justify-center mt-24 invisible xl:visible hidden lg:flex"
           >
             <Image
               src="/assets/contact-shutter/green-direction.png"

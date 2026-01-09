@@ -43,7 +43,7 @@ const MobileTeam = () => {
 
               {/* ================= CONTENT ================= */}
               <div className="absolute inset-0 flex flex-col items-center text-center mobile-team-card">
-                <h2 className="mobile-team-id text-black">
+                <h2 className="mobile-team-id text-black py-4">
                   {item.id}
                 </h2>
 

@@ -16,12 +16,12 @@ const UnderlineInput = ({
   inputRef,
   maxLength,
   onFilled,
+  value,
+  onChange,
 }) => {
-  const [value, setValue] = useState("");
-
   const handleChange = (e) => {
     const val = e.target.value;
-    setValue(val);
+    onChange?.(val);
 
     if (maxLength && val.length >= maxLength) {
       onFilled?.();
@@ -52,12 +52,45 @@ export default function ContactFormMobile() {
   /* 🔥 BUTTON STATE (DESKTOP LOGIC ADDED) */
   const [btnState, setBtnState] = useState("default");
 
+  /* 🔥 FORM VALUES */
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    location: "",
+    website: "",
+    help: "",
+    note1: "",
+    note2: "",
+  });
+
   const getBtnSrc = () => {
     if (btnState === "active")
       return "/assets/contact/contact-form-btn-onclick.svg";
     if (btnState === "hover")
       return "/assets/contact/contact-form-btn-hover.svg";
     return "/assets/contact/contact-form-btn-1.svg";
+  };
+
+  /* 🔥 HANDLE FORM SUBMIT */
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Reset all form values
+    setFormValues({
+      name: "",
+      email: "",
+      location: "",
+      website: "",
+      help: "",
+      note1: "",
+      note2: "",
+    });
+    
+    // Reset scroll state
+    setAllowScroll(false);
+    
+    // Optional: Show success message or feedback
+    console.log("Form submitted and reset!");
   };
 
   useEffect(() => {
@@ -96,22 +129,49 @@ export default function ContactFormMobile() {
         style={{ overflowY: allowScroll ? "auto" : "hidden" }}
       >
         <p className={roadRage.className}>
-          My name is <UnderlineInput width={90} /> and you can reach me at{" "}
-          <UnderlineInput width={150} />.
+          My name is{" "}
+          <UnderlineInput
+            width={90}
+            value={formValues.name}
+            onChange={(val) => setFormValues({ ...formValues, name: val })}
+          />{" "}
+          and you can reach me at{" "}
+          <UnderlineInput
+            width={150}
+            value={formValues.email}
+            onChange={(val) => setFormValues({ ...formValues, email: val })}
+          />
+          .
         </p>
 
         <p className={roadRage.className}>
-          I'm writing from <UnderlineInput width={120} /> and would love to work
-          together.
+          I'm writing from{" "}
+          <UnderlineInput
+            width={120}
+            value={formValues.location}
+            onChange={(val) => setFormValues({ ...formValues, location: val })}
+          />{" "}
+          and would love to work together.
         </p>
 
         <p className={roadRage.className}>
-          Our website is <UnderlineInput width={160} /> or we're starting fresh.
+          Our website is{" "}
+          <UnderlineInput
+            width={160}
+            value={formValues.website}
+            onChange={(val) => setFormValues({ ...formValues, website: val })}
+          />{" "}
+          or we're starting fresh.
         </p>
 
         <p className={roadRage.className}>
-          We're looking for help with <UnderlineInput width={200} />. Here's a
-          quick note about what we have in mind
+          We're looking for help with{" "}
+          <UnderlineInput
+            width={200}
+            value={formValues.help}
+            onChange={(val) => setFormValues({ ...formValues, help: val })}
+          />
+          . Here's a quick note about what we have in mind
         </p>
 
         {/* 🔥 SPECIAL UNDERLINE 1 */}
@@ -120,6 +180,8 @@ export default function ContactFormMobile() {
             width={240}
             maxLength={40}
             inputRef={noteLine1Ref}
+            value={formValues.note1}
+            onChange={(val) => setFormValues({ ...formValues, note1: val })}
             onFilled={() => noteLine2Ref.current?.focus()}
           />
         </p>
@@ -130,6 +192,8 @@ export default function ContactFormMobile() {
             width={280}
             maxLength={60}
             inputRef={noteLine2Ref}
+            value={formValues.note2}
+            onChange={(val) => setFormValues({ ...formValues, note2: val })}
             onFilled={() => setAllowScroll(true)}
           />
         </p>
@@ -138,6 +202,7 @@ export default function ContactFormMobile() {
         <div className="m-btn">
           <button
             type="submit"
+            onClick={handleSubmit}
             onMouseEnter={() => setBtnState("hover")}
             onMouseLeave={() => setBtnState("default")}
             onMouseDown={() => setBtnState("active")}

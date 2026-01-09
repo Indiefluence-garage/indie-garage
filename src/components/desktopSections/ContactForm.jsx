@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { Road_Rage } from "next/font/google";
 import { useState } from "react";
@@ -12,9 +11,7 @@ const roadRage = Road_Rage({
 /* ===============================
    UNDERLINE INPUT (SCROLLABLE)
 ================================ */
-const UnderlineInput = ({ minWidth }) => {
-  const [value, setValue] = useState("");
-
+const UnderlineInput = ({ minWidth, value, onChange }) => {
   return (
     <span
       className="relative inline-block align-baseline"
@@ -24,7 +21,7 @@ const UnderlineInput = ({ minWidth }) => {
       <input
         type="text"
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => onChange?.(e.target.value)}
         className={`
           ${roadRage.className}
           w-full
@@ -42,7 +39,6 @@ const UnderlineInput = ({ minWidth }) => {
           overflow-x-auto
         `}
       />
-
       {/* UNDERLINE */}
       <span className="block border-b-2 border-black w-full"></span>
     </span>
@@ -54,14 +50,46 @@ const ContactForm = () => {
      BUTTON STATE
   ================================ */
   const [btnState, setBtnState] = useState("default");
-  // default | hover | active
 
+  /* ===============================
+     FORM VALUES
+  ================================ */
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    location: "",
+    website: "",
+    help: "",
+    note: "",
+  });
+
+  // default | hover | active
   const getBtnSrc = () => {
     if (btnState === "active")
       return "/assets/contact/contact-form-btn-onclick.svg";
     if (btnState === "hover")
       return "/assets/contact/contact-form-btn-hover.svg";
     return "/assets/contact/contact-form-btn-1.svg";
+  };
+
+  /* ===============================
+     HANDLE FORM SUBMIT
+  ================================ */
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Reset all form values
+    setFormValues({
+      name: "",
+      email: "",
+      location: "",
+      website: "",
+      help: "",
+      note: "",
+    });
+    
+    // Optional: Show success message or feedback
+    console.log("Form submitted and reset!");
   };
 
   return (
@@ -74,37 +102,63 @@ const ContactForm = () => {
         priority
         className="object-cover"
       />
-
       {/* CONTENT */}
       <div className="relative z-10 max-w-[1100px] mx-auto pt-[90px] xl:pt-[90px] 2xl:pt-[160px] text-center text-[#2b2b2b] leading-9 contact-form">
         {/* LINE 1 */}
         <p className={`${roadRage.className} text-[32px] right-5`}>
-          My name is <UnderlineInput minWidth={120} /> and you can reach me at{" "}
-          <UnderlineInput minWidth={220} />. I’m writing from{" "}
-          <UnderlineInput minWidth={140} />.
+          My name is{" "}
+          <UnderlineInput
+            minWidth={120}
+            value={formValues.name}
+            onChange={(val) => setFormValues({ ...formValues, name: val })}
+          />{" "}
+          and you can reach me at{" "}
+          <UnderlineInput
+            minWidth={220}
+            value={formValues.email}
+            onChange={(val) => setFormValues({ ...formValues, email: val })}
+          />
+          . I'm writing from{" "}
+          <UnderlineInput
+            minWidth={140}
+            value={formValues.location}
+            onChange={(val) => setFormValues({ ...formValues, location: val })}
+          />
+          .
         </p>
-
         {/* LINE 2 */}
         <p className={`${roadRage.className} text-[32px]`}>
           and would love to explore working together. Our website is{" "}
-          <UnderlineInput minWidth={220} /> or we’re starting fresh.
+          <UnderlineInput
+            minWidth={220}
+            value={formValues.website}
+            onChange={(val) => setFormValues({ ...formValues, website: val })}
+          />{" "}
+          or we're starting fresh.
         </p>
-
         {/* LINE 3 */}
         <p className={`${roadRage.className} text-[32px]`}>
-          We’re looking for help with <UnderlineInput minWidth={260} />. Here’s
-          a quick note about what we have in mind
+          We're looking for help with{" "}
+          <UnderlineInput
+            minWidth={260}
+            value={formValues.help}
+            onChange={(val) => setFormValues({ ...formValues, help: val })}
+          />
+          . Here's a quick note about what we have in mind
         </p>
-
         {/* LINE 4 */}
         <p className={`${roadRage.className} text-[32px]`}>
-          <UnderlineInput minWidth={420} />
+          <UnderlineInput
+            minWidth={420}
+            value={formValues.note}
+            onChange={(val) => setFormValues({ ...formValues, note: val })}
+          />
         </p>
-
         {/* BUTTON */}
         <div className="mt-12 flex justify-center">
           <button
             type="submit"
+            onClick={handleSubmit}
             className={`
               transition-all
               duration-300
@@ -127,13 +181,11 @@ const ContactForm = () => {
           </button>
         </div>
       </div>
-
-      <style jsx>{`
+      <style>{`
         @media (min-width: 2000px) {
           .contact-section {
             height: 850px;
           }
-
           .contact-form {
             margin-top: 80px;
           }

@@ -7,7 +7,6 @@ import Footer from "@/components/navigation/Footer";
 import FooterBottomBanner from "@/components/navigation/FooterBottomBanner";
 import MobileFooter from "@/components/mobileNavigation/MobileFooter";
 import LenisProvider from "@/components/desktopSections/scroll/lenis/LenisProvider";
-import MobileBottomFooter from "@/components/mobileNavigation/MobileBottomFooter";
 
 const cormorant = Cormorant({
   weight: ["400", "600"],
@@ -44,7 +43,7 @@ export default function RootLayout({ children }) {
           <MobileNav />
           <main className="flex-1">{children}</main>
           <MobileFooter />
-          <MobileBottomFooter/>
+          <FooterBottomBanner/>
         </div>
 
         {/* ================= TABLET BLOCK SCREEN ================= */}

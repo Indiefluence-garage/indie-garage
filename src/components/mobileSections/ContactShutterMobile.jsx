@@ -72,21 +72,12 @@ const ContactShutterMobile = () => {
       {/* ================= CONTENT ================= */}
       <div className="relative z-10 w-full p-4 sm:p-5">
         <div className="w-full flex flex-col gap-10">
-
           {/* ================= LEFT (CONTACT INFO) ================= */}
           <div className="relative w-full mobile-left-height">
             <div className="absolute inset-0 red-panel" />
 
             <div
-              className="
-                relative z-10
-                h-full
-                px-4 pt-6 pb-6
-                sm:px-6 sm:pt-8 sm:pb-8
-                text-[#FFBE05]
-                space-y-12
-                lg-mid-content
-              "
+              className="relative z-10 h-full px-4 pt-6 pb-6 sm:px-6 sm:pt-8 sm:pb-8 text-[#FFBE05] space-y-12 lg-mid-content"
             >
               {/* CALL */}
               <div>
@@ -95,7 +86,7 @@ const ContactShutterMobile = () => {
                 </h3>
                 <a
                   href="https://wa.me/919817742069"
-                  className={`${roadRage.className} text-[28px] text-[#FFDAA4] block`}
+                  className={`${roadRage.className} text-[28px] text-[#FFDAA4] block active:underline underline-offset-4`}
                 >
                   +91 98177 42069
                 </a>
@@ -108,7 +99,7 @@ const ContactShutterMobile = () => {
                 </h3>
                 <a
                   href="mailto:venu@indiefluence.in"
-                  className={`${roadRage.className} text-[28px] text-[#FFDAA4] block`}
+                  className={`${roadRage.className} text-[28px] text-[#FFDAA4] block active:underline underline-offset-4`}
                 >
                   venu@indiefluence.in
                 </a>
@@ -116,18 +107,20 @@ const ContactShutterMobile = () => {
 
               {/* ADDRESS */}
               <div>
-                <h3 className={`${roadRage.className} text-[48px]`}>
-                  PATA:
-                </h3>
-                <p
-                  className={`${roadRage.className} text-[28px] text-[#FFDAA4] leading-tight`}
+                <h3 className={`${roadRage.className} text-[48px]`}>PATA:</h3>
+
+                <a
+                  href="https://www.google.com/maps?q=PLOT+NO.+151,+SECTOR-2,+INDUSTRIAL+AREA,+KURUKSHETRA,+HARYANA+136118"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${roadRage.className} text-[28px] text-[#FFDAA4] leading-tight inline-block active:underline underline-offset-4`}
                 >
                   PLOT NO. 151, SECTOR-2, INDUSTRIAL
                   <br />
                   AREA, KURUKSHETRA, HARYANA
                   <br />
                   136118
-                </p>
+                </a>
               </div>
 
               {/* TIME */}
@@ -165,7 +158,6 @@ const ContactShutterMobile = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
