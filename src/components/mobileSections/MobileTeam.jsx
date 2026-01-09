@@ -7,7 +7,7 @@ import { preloadImage } from "@/utils/preloadAssets";
 import "@/components/css/mobileTeam.css";
 
 const TEAM_BG = "/assets/hero-section/mobile-bg.png";
-const CARD_BG = "/assets/hero-section/card-bg.svg";
+const CARD_BG = "/assets/hero-section/mobile-teamcard-bg.svg";
 
 const MobileTeam = () => {
   /* ================= PRELOAD ASSETS ================= */
@@ -47,7 +47,7 @@ const MobileTeam = () => {
                   {item.id}
                 </h2>
 
-                <h2 className="mobile-team-title font-medium tracking-wide">
+                <h2 className="mobile-team-title font-medium tracking-wide leading-12">
                   {item.title}
                 </h2>
 

@@ -9,6 +9,7 @@ import FooterTopBanner from '../desktopSections/FooterTopBanner'
 import ClientsBanner from '../desktopSections/ClientsBanner'
 import ContactFormMobile from '../mobileSections/ContactFormMobile'
 import ContactShutterMobile from '../mobileSections/ContactShutterMobile'
+import MobileServices from '../mobileSections/MobileServices'
 
 const MobileHome = () => {
   return (
@@ -17,7 +18,8 @@ const MobileHome = () => {
       <MobileHero/>
       <MobileVideo/>
       <MobileBanner/>
-      <MobileTeam/>
+      {/* <MobileTeam/> */}
+      <MobileServices/>
       <MobileTestimonial/>
       <ClientsBanner/>
       <ContactFormMobile/>
