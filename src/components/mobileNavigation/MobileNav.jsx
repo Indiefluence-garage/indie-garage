@@ -17,7 +17,7 @@ const MobileNav = () => {
 
     // optional: preload menu images (if you want instant menu open)
     preloadImage('/assets/navbar/home.png');
-    preloadImage('/assets/navbar/about.png');
+    preloadImage('/assets/navbar/review.png');
     preloadImage('/assets/navbar/services.png');
     preloadImage('/assets/navbar/work.png');
     preloadImage('/assets/navbar/contact.png');
@@ -83,7 +83,7 @@ const MobileNav = () => {
 
   const navItems = [
     { name: 'HOME', image: '/assets/navbar/home.png' },
-    { name: 'ABOUT', image: '/assets/navbar/about.png' },
+    { name: 'REVIEW', image: '/assets/navbar/review.png' },
     { name: 'SERVICES', image: '/assets/navbar/services.png' },
     { name: 'WORK', image: '/assets/navbar/work.png' },
     { name: 'CONTACT US', image: '/assets/navbar/contact.png' }
@@ -135,7 +135,7 @@ const MobileNav = () => {
               <img
                 src="/assets/navbar/cross.svg"
                 alt="Close"
-                className="w-10 h-10"
+                className="w-9 h-9"
               />
             </button>
           </div>
@@ -156,7 +156,7 @@ const MobileNav = () => {
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-auto h-12 object-contain"
+                      className="w-auto h-11 object-contain"
                     />
                   </a>
                 </div>

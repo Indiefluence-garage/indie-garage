@@ -36,7 +36,7 @@ const TestimonialSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full 2xl:min-h-screen bg-[#FFFDF1] overflow-hidden pb-10 2xl:pb-20">
+    <section className="relative w-full 2xl:min-h-screen bg-[#FFFDF1] overflow-hidden pb-10 2xl:pb-20" id="testimonials"> 
       {/* TOP DECORATIONS */}
       <div className="absolute top-0 left-0 w-full flex justify-between z-10 pointer-events-none">
         <Image

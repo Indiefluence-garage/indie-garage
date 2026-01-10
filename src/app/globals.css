@@ -13,3 +13,12 @@ html,
 body {
   overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  position: relative;
+  scroll-margin-top: 100px; /* Navbar height + buffer */
+}

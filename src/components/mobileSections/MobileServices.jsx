@@ -1,15 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import teamData from "@/data/teamData";
+import { preloadImage } from "@/utils/preloadAssets";
 
-/**
- * Per-card layout & typography overrides.
- * Use this when font metrics (Cormorant) or content
- * require manual visual correction.
- *
- * Keys = card IDs
- */
+/* ===============================
+   PER-CARD STYLE OVERRIDES
+   =============================== */
 const CARD_STYLES = {
   "01": {},
   "02": {},
@@ -29,7 +26,6 @@ const CARD_STYLES = {
     numberSize: "clamp(32px, 30vw, 128px)",
   },
   "06": {
-    // Reduced space below number (Cormorant numeral issue)
     numberPt: "pt-34",
     numberMb: "mb-2",
     numberSize: "clamp(30px, 28vw, 120px)",
@@ -40,27 +36,42 @@ const CARD_STYLES = {
     numberSize: "clamp(32px, 28vw, 128px)",
   },
   "08": {
-    // Needs tighter number → title spacing
     numberPt: "pt-32",
     numberMb: "mb-2",
     numberSize: "clamp(30px, 28vw, 120px)",
   },
 };
 
-/**
- * Defaults for cards without overrides
- */
+/* ===============================
+   DEFAULT STYLES
+   =============================== */
 const DEFAULTS = {
   numberPt: "pt-28",
-  numberMb: "mb-3",
+  numberMb: "mb-2",
   numberSize: "clamp(36px, 35.2vw, 144px)",
-  titleSize: "clamp(18px, 11.4vw, 48px)",
-  descSize: "clamp(13px, 4.10vw, 17px)",
+  titleSize: "clamp(18px, 11.1vw, 48px)",
+  descSize: "clamp(13px, 4.02vw, 16px)",
 };
 
 const MobileServices = () => {
+  /* ===============================
+     PRELOAD ASSETS (ONCE)
+     =============================== */
+  useEffect(() => {
+    preloadImage("/assets/hero-section/service-imgs/mobile-bg.webp");
+    preloadImage("/assets/hero-section/service-imgs/mobile-teamcard-bg.svg");
+  }, []);
+
   return (
-    <section className="md:hidden w-full">
+    <section
+      className="md:hidden w-full "
+  style={{
+    backgroundImage: "url('/assets/hero-section/mobile-bg.webp')",
+    backgroundRepeat: "repeat-y",
+    backgroundPosition: "center top",
+    backgroundSize: "100% auto",
+  }}
+    >
       {teamData.map((item) => {
         const styles = { ...DEFAULTS, ...CARD_STYLES[item.id] };
 
@@ -68,13 +79,8 @@ const MobileServices = () => {
           <div
             key={item.id}
             className="relative w-full py-16 flex items-center justify-center"
-            style={{
-              backgroundImage:
-                "url('/assets/hero-section/team-bg-mobile.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
           >
+            {/* CARD */}
             <div className="w-full flex justify-center">
               <div
                 className="relative w-full max-w-[420px] flex items-center justify-center"

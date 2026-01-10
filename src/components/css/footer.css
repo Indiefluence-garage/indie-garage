@@ -28,9 +28,12 @@
     width: 230px !important;
   }
 
-  .site-footer img[alt="Home"],
-  .site-footer img[alt="About"] {
+  .site-footer img[alt="Home"] {
     width: 210px !important;
+  }
+
+  .site-footer img[alt="Review"] {
+    width: 300px !important;
   }
 
   .site-footer img[alt="LinkedIn"],
@@ -341,11 +344,15 @@
     { 
         width: 150px !important; 
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"]
     { 
         width: 140px !important; 
         margin-top: 0;
     } 
+    
+    .site-footer img[alt="Review"] {
+    width: 195px !important;
+  }
     
     .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
     .site-footer img[alt="Instagram"] 
@@ -380,11 +387,17 @@
     { 
         width: 135px !important; 
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"]
     { 
         width: 130px !important; 
         margin-top: 10px;
-    } 
+    }
+    .site-footer img[alt="Review"]
+    { 
+        width: 180px !important; 
+        margin-top: 12px;
+    }
+
     
     .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
     .site-footer img[alt="Instagram"] 
@@ -475,11 +488,17 @@
         width: 100px !important; 
         margin-top: -40px;
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"]
     { 
         width: 90px !important; 
         margin-top: 35px;
-    } 
+    }
+
+    .site-footer img[alt="Review"]
+    { 
+        width: 150px !important; 
+        margin-top: 35px;
+    }
     
     .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
     .site-footer img[alt="Instagram"] 
@@ -518,11 +537,17 @@
     { 
         width: 125px !important; 
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"]
     { 
         width: 120px !important; 
         margin-top: 25px;
     } 
+
+    .site-footer img[alt="Review"]
+    { 
+        width: 165px !important; 
+        margin-top: 30px;
+    }
     
     .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
     .site-footer img[alt="Instagram"] 
@@ -562,7 +587,7 @@
         width: 115px !important; 
         margin-top: 5px;
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"]
     { 
         width: 110px !important; 
         margin-top: 25px;
@@ -612,11 +637,17 @@
         width: 100px !important; 
         margin-top: -40px;
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"]
     { 
         width: 90px !important; 
         margin-top: 35px;
     } 
+
+    .site-footer img[alt="Review"]
+    { 
+        width: 140px !important; 
+        margin-top: 35px;
+    }
     
     .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
     .site-footer img[alt="Instagram"] 
@@ -717,11 +748,17 @@
         width: 100px !important; 
         margin-top: -40px;
     } 
-    .site-footer img[alt="Home"], .site-footer img[alt="About"] 
+    .site-footer img[alt="Home"] 
     { 
         width: 90px !important; 
         margin-top: 35px;
     } 
+
+    .site-footer img[alt="Review"]
+    { 
+        width: 130px !important; 
+        margin-top: 35px;
+    }
     
     .site-footer img[alt="LinkedIn"], .site-footer img[alt="YouTube"], 
     .site-footer img[alt="Instagram"] 

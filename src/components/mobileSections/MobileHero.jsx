@@ -7,8 +7,9 @@ import { preloadImage, preloadVideo } from "@/utils/preloadAssets";
 
 const MobileHero = () => {
   const [isIOS, setIsIOS] = useState(false);
+  const [truckLoaded, setTruckLoaded] = useState(false);
 
-  /* 🔥 PRELOAD LOGIC — THIS WAS MISSING */
+  /* 🔥 PRELOAD LOGIC */
   useEffect(() => {
     preloadImage("/assets/hero-section/intro-section/mobile-hero-top-design.png");
     preloadImage("/assets/hero-section/intro-section/mobile-left-ladi.png");
@@ -21,7 +22,7 @@ const MobileHero = () => {
     );
   }, []);
 
-  /* ✅ YOUR ORIGINAL iOS LOGIC — UNCHANGED */
+  /* ✅ iOS DETECTION */
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -32,6 +33,25 @@ const MobileHero = () => {
 
     setIsIOS(ios);
   }, []);
+
+  /* 🚚 WAIT FOR TRUCK ASSET TO LOAD */
+  useEffect(() => {
+    const truckAsset = isIOS
+      ? "/assets/hero-section/intro-section/truck-animation.gif"
+      : "/assets/hero-section/intro-section/truck-animation.webm";
+
+    if (isIOS) {
+      const img = new window.Image();
+      img.onload = () => setTruckLoaded(true);
+      img.onerror = () => setTruckLoaded(true); // Show anyway on error
+      img.src = truckAsset;
+    } else {
+      const video = document.createElement("video");
+      video.onloadeddata = () => setTruckLoaded(true);
+      video.onerror = () => setTruckLoaded(true);
+      video.src = truckAsset;
+    }
+  }, [isIOS]);
 
   return (
     <section className="mobile-hero relative w-full min-h-screen bg-[#FFF8E9] overflow-hidden flex flex-col">
@@ -69,25 +89,33 @@ const MobileHero = () => {
           className="right-ladi absolute right-4 top-1/2 -translate-y-1/2 w-[20px]"
         />
 
-        {/* 🚚 TRUCK */}
+        {/* 🚚 TRUCK - Only show when loaded */}
         <div className="truck relative z-10 w-[120px] h-[120px] mb-8">
-          {isIOS ? (
-            <Image
-              src="/assets/hero-section/intro-section/truck-animation.gif"
-              alt="Truck animation"
-              width={120}
-              height={120}
-              priority
-              className="w-full h-auto"
-            />
-          ) : (
-            <video autoPlay loop muted playsInline className="w-full h-auto">
-              <source
-                src="/assets/hero-section/intro-section/truck-animation.webm"
-                type="video/webm"
-              />
-            </video>
+          {!truckLoaded && (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="w-8 h-8 border-3 border-black border-t-transparent rounded-full animate-spin"></div>
+            </div>
           )}
+          
+          <div className={`transition-opacity duration-300 ${truckLoaded ? 'opacity-100' : 'opacity-0'}`}>
+            {isIOS ? (
+              <Image
+                src="/assets/hero-section/intro-section/truck-animation.gif"
+                alt="Truck animation"
+                width={120}
+                height={120}
+                priority
+                className="w-full h-auto"
+              />
+            ) : (
+              <video autoPlay loop muted playsInline className="w-full h-auto">
+                <source
+                  src="/assets/hero-section/intro-section/truck-animation.webm"
+                  type="video/webm"
+                />
+              </video>
+            )}
+          </div>
         </div>
 
         {/* ✍️ TEXT */}

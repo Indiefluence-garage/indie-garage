@@ -1,6 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
+import { preloadVideo, preloadImage } from "@/utils/preloadAssets"; // adjust path
+
 export default function IntroPanel() {
+  useEffect(() => {
+    preloadVideo(
+      "/assets/hero-section/intro-section/truck-animation.webm",
+      "video/webm"
+    );
+
+    // Optional: preload decorative images too
+    preloadImage(
+      "/assets/hero-section/intro-section/left-ladi.png"
+    );
+    preloadImage(
+      "/assets/hero-section/intro-section/right-ladi.png"
+    );
+  }, []);
+
   return (
     /* FULL WIDTH PANEL (BACKGROUND) */
     <div
@@ -23,18 +41,13 @@ export default function IntroPanel() {
               alt=""
             />
 
-            {/* <img
-              src="/assets/hero-section/truck-animation.gif"
-              className="mb-6 xl:w-[142px] xl:h-[142px] 2xl:w-[152px] 2xl:h-[152px]"
-              alt=""
-            /> */}
-
             <video
               src="/assets/hero-section/intro-section/truck-animation.webm"
               autoPlay
               muted
               loop
               playsInline
+              preload="auto"
               className="mb-6 w-[142px] xl:w-[142px] xl:h-[142px] 2xl:w-[152px] 2xl:h-[152px]"
             />
 
@@ -45,12 +58,7 @@ export default function IntroPanel() {
             </h1>
 
             <p className="mt-6 xl:text-[17px] 2xl:text-[20px] text-black font-light text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </p>
           </div>
         </div>
@@ -64,6 +72,7 @@ export default function IntroPanel() {
               muted
               loop
               playsInline
+              preload="metadata"
               className="h-full w-full object-cover"
             />
           </div>

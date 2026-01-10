@@ -13,10 +13,10 @@ const roadRage = Road_Rage({
 
 /* ================= MAP JSON ================= */
 const MAP_DATA = [
-  { id: 1, src: "/assets/contact-shutter/sector-2.png", z: "z-10" },
-  { id: 2, src: "/assets/contact-shutter/pipli.png", z: "z-20" },
-  { id: 3, src: "/assets/contact-shutter/haryana.png", z: "z-30" },
-  { id: 4, src: "/assets/contact-shutter/india.png", z: "z-40" },
+  { id: 1, src: "/assets/contactdetails-imgs/sector-2.webp", z: "z-10" },
+  { id: 2, src: "/assets/contactdetails-imgs/pipli.webp", z: "z-20" },
+  { id: 3, src: "/assets/contactdetails-imgs/haryana.webp", z: "z-30" },
+  { id: 4, src: "/assets/contactdetails-imgs/india.webp", z: "z-40" },
 ];
 
 /* ================= ISOMORPHIC EFFECT ================= */
@@ -62,7 +62,7 @@ const ContactShutterMobile = () => {
     <section className="relative w-full overflow-hidden py-10">
       {/* ================= MOBILE BACKGROUND ================= */}
       <Image
-        src="/assets/contact-shutter/contactshutter-bg-mobile.png"
+        src="/assets/contactdetails-imgs/contactshutter-bg-mobile.webp"
         alt="Mobile shutter background"
         fill
         priority

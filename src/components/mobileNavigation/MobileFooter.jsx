@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { preloadImage } from "@/utils/preloadAssets";
 
 const MobileFooter = () => {
   const navItems = [
@@ -16,6 +19,27 @@ const MobileFooter = () => {
     { name: "Instagram", icon: "/assets/footer/insta.png", url: "#" },
   ];
 
+  /* ================= PRELOAD LOGIC ================= */
+  useEffect(() => {
+    // Decorative SVGs
+    preloadImage("/assets/footer/mobile-footer-top-design.svg");
+    preloadImage("/assets/footer/mobile-bottom-footer-design.svg");
+
+    // Logo
+    preloadImage("/assets/navbar/inide-grage-logo.svg");
+
+    // Nav icons + fruit images (IMPORTANT)
+    navItems.forEach(({ icon, fruit }) => {
+      preloadImage(icon);
+      preloadImage(fruit);
+    });
+
+    // Social icons
+    socialIcons.forEach(({ icon }) => {
+      preloadImage(icon);
+    });
+  }, []);
+
   return (
     <footer className="w-full bg-[#FFFDF1]">
       {/* Top decorative SVG */}
@@ -30,9 +54,9 @@ const MobileFooter = () => {
         />
       </div>
 
-      {/* Main footer content with padding on all sides */}
+      {/* Main footer content */}
       <div className="p-4">
-        {/* Logo - full width within the padded container */}
+        {/* Logo */}
         <div className="w-full mb-6 pt-10">
           <Image
             src="/assets/navbar/inide-grage-logo.svg"
@@ -43,16 +67,15 @@ const MobileFooter = () => {
           />
         </div>
 
-        {/* Navigation items with borders */}
+        {/* Navigation */}
         <div>
-          {/* Top border before first item */}
           <div className="border-t border-[#7D7D7D] opacity-35" />
 
           {navItems.map((item, index) => (
             <React.Fragment key={index}>
               <div className="flex items-center justify-between py-7 px-3">
-                {/* Left side - nav icon - fixed height container */}
-                <div className="h-12 flex items-center justify-start">
+                {/* Nav icon */}
+                <div className="h-12 flex items-center">
                   <Image
                     src={item.icon}
                     alt="Navigation icon"
@@ -61,7 +84,8 @@ const MobileFooter = () => {
                     className="h-full w-auto object-contain"
                   />
                 </div>
-                {/* Right side - fruit icon - fixed size */}
+
+                {/* Fruit icon */}
                 <div className="w-15 h-14 flex items-center justify-end flex-shrink-0">
                   <Image
                     src={item.fruit}
@@ -72,12 +96,12 @@ const MobileFooter = () => {
                   />
                 </div>
               </div>
-              {/* Border after each item */}
+
               <div className="border-t border-[#7D7D7D] opacity-35" />
             </React.Fragment>
           ))}
 
-          {/* Social icons section - full width with equal spacing */}
+          {/* Social icons */}
           <div className="flex items-center justify-between py-6 px-3 gap-10">
             {socialIcons.map((social, index) => (
               <Link
@@ -85,7 +109,7 @@ const MobileFooter = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center transition-transform hover:scale-110 "
+                className="flex-1 flex items-center justify-center transition-transform hover:scale-110"
               >
                 <Image
                   src={social.icon}

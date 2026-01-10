@@ -13,10 +13,10 @@ const roadRage = Road_Rage({
 
 /* ================= MAP JSON ================= */
 const MAP_DATA = [
-  { id: 1, src: "/assets/contact-shutter/sector-2.png", z: "z-10" },
-  { id: 2, src: "/assets/contact-shutter/pipli.png", z: "z-20" },
-  { id: 3, src: "/assets/contact-shutter/haryana.png", z: "z-30" },
-  { id: 4, src: "/assets/contact-shutter/india.png", z: "z-40" },
+  { id: 1, src: "/assets/contactdetails-imgs/sector-2.webp", z: "z-10" },
+  { id: 2, src: "/assets/contactdetails-imgs/pipli.webp", z: "z-20" },
+  { id: 3, src: "/assets/contactdetails-imgs/haryana.webp", z: "z-30" },
+  { id: 4, src: "/assets/contactdetails-imgs/india.webp", z: "z-40" },
 ];
 
 /* ================= ISOMORPHIC EFFECT ================= */
@@ -62,7 +62,7 @@ const ContactShutterBanner = () => {
     <section className="relative w-full h-[650px] xl:h-[800px] 2xl:h-screen overflow-hidden lg-mid-section">
       {/* ================= BACKGROUND ================= */}
       <Image
-        src="/assets/contact-shutter/bg-test.png"
+        src="/assets/contactdetails-imgs/bg-test.webp"
         alt="Metal shutter background"
         fill
         priority
@@ -154,7 +154,7 @@ const ContactShutterBanner = () => {
             className="green-board relative h-full w-[36%] lg-mid-center flex items-center justify-center mt-24 invisible xl:visible hidden lg:flex"
           >
             <Image
-              src="/assets/contact-shutter/green-direction.png"
+              src="/assets/contactdetails-imgs/green-direction.webp"
               alt="Office direction signboard"
               fill
               className="object-contain blend-item lg-mid-green"

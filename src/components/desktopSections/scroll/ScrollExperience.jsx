@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 import IntroPanel from "@/components/desktopSections/scroll/IntroPanel";
 import BannerPanel from "@/components/desktopSections/scroll/BannerPanel";
-import TeamPanel from "@/components/desktopSections/scroll/TeamPanel";
+import ServicesPanel from "@/components/desktopSections/scroll/ServicesPanel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +97,7 @@ export default function ScrollExperience() {
         
         <IntroPanel />
         <BannerPanel />
-        <TeamPanel />
+        <ServicesPanel />
       </div>
     </section>
   );

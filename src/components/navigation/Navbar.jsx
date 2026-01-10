@@ -1,29 +1,43 @@
 "use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
+import { preloadImage } from "@/utils/preloadAssets";
 
 const navItems = [
-  { src: "/assets/navbar/home-text.png", alt: "Home" },
-  { src: "/assets/navbar/about-text.png", alt: "About" },
-  { src: "/assets/navbar/services-text.png", alt: "Services" },
-  { src: "/assets/navbar/work-text.png", alt: "Work" },
-  { src: "/assets/navbar/contact-text.png", alt: "Contact Us" },
+  { src: "/assets/navbar/home.png", alt: "Home" },
+  { src: "/assets/navbar/review.png", alt: "Review" },
+  { src: "/assets/navbar/services.png", alt: "Services" },
+  { src: "/assets/navbar/work.png", alt: "Work" },
+  { src: "/assets/navbar/contact.png", alt: "Contact Us" },
 ];
 
 const Navbar = () => {
+  useEffect(() => {
+    // Preload logo SVG
+    preloadImage("/assets/navbar/inide-grage-logo.svg");
+
+    // Preload nav item SVGs
+    navItems.forEach((item) => {
+      preloadImage(item.src);
+    });
+  }, []);
+
   return (
     <header className="w-full bg-[#FFFDF1] border-b border-[#7D7D7D] fixed top-0 left-0 right-0 z-50">
       <div className="grid grid-cols-[1.5fr_repeat(5,1fr)] h-[80px]">
+
         {/* Logo */}
-        <div className="flex items-center px-6 border-r border-[#7D7D7D] overflow-hidden">
+        <div className="flex items-center px-6 border-r border-[#7D7D7D]">
           <Image
             src="/assets/navbar/inide-grage-logo.svg"
             alt="Indiefluence Garage"
             width={160}
             height={80}
             priority
-            className=""
           />
         </div>
+
         {/* Nav Items */}
         {navItems.map((item, index) => (
           <div

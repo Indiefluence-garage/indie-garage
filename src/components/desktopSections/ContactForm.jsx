@@ -93,7 +93,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-section relative w-full h-[540px] xl:h-[630px] 2xl:h-[600px] overflow-hidden">
+    <section className="contact-section relative w-full h-[540px] xl:h-[630px] 2xl:h-[600px] overflow-hidden" id="contact">
       {/* BACKGROUND */}
       <Image
         src="/assets/contact/contact-form-bg.svg"
