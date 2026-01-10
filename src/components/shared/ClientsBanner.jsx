@@ -182,7 +182,8 @@ const ClientsBanner = () => {
 
   return (
     <>
-      {/* ================= DESKTOP ================= */}
+      <section id="clients">
+        {/* ================= DESKTOP ================= */}
       <section className="hidden md:block relative w-full pt-10 pb-20 bg-[url('/assets/clientbanner-imgs/client-bg.webp')] bg-cover bg-center" id="clients">
         <img
           src="/assets/clientbanner-imgs/header-badge.webp"
@@ -241,7 +242,7 @@ const ClientsBanner = () => {
       </section>
 
       {/* ================= MOBILE ================= */}
-      <section className="md:hidden min-h-screen bg-[url('/assets/clientbanner-imgs/client-mobile-bg.webp')] bg-cover bg-center flex flex-col pt-6 px-4 pb-16">
+      <section className="md:hidden min-h-screen bg-[url('/assets/clientbanner-imgs/client-mobile-bg.webp')] bg-cover bg-center flex flex-col pt-6 px-4 pb-16" id="clients">
         <img
           src="/assets/clientbanner-imgs/header-badge.webp"
           className="client-blend-badge mx-auto mb-4 w-[300px] shrink-0"
@@ -300,6 +301,8 @@ const ClientsBanner = () => {
             />
           </button>
         </div>
+      </section>
+
       </section>
     </>
   );

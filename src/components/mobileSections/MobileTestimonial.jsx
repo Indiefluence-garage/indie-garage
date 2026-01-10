@@ -56,7 +56,7 @@ export default function MobileTestimonial() {
   const data = testimonials[index];
 
   return (
-    <section className="mobile-testimonial-section">
+    <section className="mobile-testimonial-section" id="testimonials">
       {/* TOP SVG */}
       <Image
         src={TOP_SVG}

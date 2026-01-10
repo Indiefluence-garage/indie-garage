@@ -111,7 +111,7 @@ export default function ContactFormMobile() {
   }, []);
 
   return (
-    <section className="m-contact">
+    <section className="m-contact" id="contact">
       <div className="m-bg-container">
         <Image
           src="/assets/contact/contactform-bg-mobile.png"

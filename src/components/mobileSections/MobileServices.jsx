@@ -66,11 +66,12 @@ const MobileServices = () => {
     <section
       className="md:hidden w-full "
   style={{
-    backgroundImage: "url('/assets/hero-section/mobile-bg.webp')",
+    backgroundImage: "url('/assets/hero-section/service-imgs/mobile-bg.webp')",
     backgroundRepeat: "repeat-y",
     backgroundPosition: "center top",
     backgroundSize: "100% auto",
   }}
+  id="services"
     >
       {teamData.map((item) => {
         const styles = { ...DEFAULTS, ...CARD_STYLES[item.id] };
@@ -86,7 +87,7 @@ const MobileServices = () => {
                 className="relative w-full max-w-[420px] flex items-center justify-center"
                 style={{
                   backgroundImage:
-                    "url('/assets/hero-section/mobile-teamcard-bg.svg')",
+                    "url('/assets/hero-section/service-imgs/mobile-teamcard-bg.svg')",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "100% 100%",
                   aspectRatio: "3 / 5",

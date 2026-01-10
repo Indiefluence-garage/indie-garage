@@ -54,7 +54,7 @@ const MobileHero = () => {
   }, [isIOS]);
 
   return (
-    <section className="mobile-hero relative w-full min-h-screen bg-[#FFF8E9] overflow-hidden flex flex-col">
+    <section className="mobile-hero relative w-full min-h-screen bg-[#FFF8E9] overflow-hidden flex flex-col" id="home">
       
       {/* 🔶 TOP DESIGN */}
       <div className="w-full shrink-0 mt-20 mb-0">
